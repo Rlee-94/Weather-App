@@ -40,5 +40,8 @@ body {
 .main__input-text {
   font-size: 1.6rem;
 }
+.main__submit {
+  padding: 0.3rem;
+}
 
 /*# sourceMappingURL=main.css.map */
