@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  background-image: linear-gradient(to right bottom, rgba(57, 172, 234, 0.8), rgba(36, 100, 202, 0.8));
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.content__container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header__title {
+  margin-top: 5rem;
+  font-size: 5rem;
+}
+
+.main__input {
+  margin-top: 2rem;
+  padding: 0.3rem;
+}
+.main__input-text {
+  font-size: 1.6rem;
+}
+
+/*# sourceMappingURL=main.css.map */
