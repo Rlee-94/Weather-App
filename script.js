@@ -1,5 +1,6 @@
 const form = document.getElementById("main__form");
-const container = document.querySelector(".card__container");
+const container = document.querySelector(".content__container");
+const cardContainer = document.querySelector(".card__container");
 
 //City Input
 async function getWeatherData(userInput) {
@@ -17,27 +18,36 @@ async function getWeatherData(userInput) {
 async function renderWeatherData() {
   const userInput = document.querySelector(".main__input").value;
   const weatherData = await getWeatherData(userInput);
+  const card = document.createElement("div");
+  const pTemp = document.createElement("p");
+  const pName = document.createElement("p");
+  const pCountry = document.createElement("p");
+  const pForecast = document.createElement("p");
+  card.className = "card__body";
 
   //Destructured JSON
   const {
-    main: { temperature },
+    main: { temp },
     name,
     sys: { country },
     weather,
   } = weatherData;
-  console.log(weatherData);
 
-  return temperature, name, country, weather;
-}
+  pTemp.textContent = temp;
+  pName.textContent = name;
+  pCountry.textContent = country;
+  pForecast.textContent = weather[0]["description"];
 
-function creatWeatherCard() {}
+  card.appendChild(pName);
+  card.appendChild(pTemp);
+  card.appendChild(pForecast);
+  card.appendChild(pCountry);
 
-function addCardToContainer() {
-  container.appendChild(card);
+  container.appendChild(cardContainer);
+  cardContainer.appendChild(card);
 }
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault;
   renderWeatherData();
-  creatWeatherCard();
 });

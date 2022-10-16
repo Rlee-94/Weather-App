@@ -1,5 +1,6 @@
 .content__container {
   min-height: 100vh;
+  min-width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -26,4 +27,18 @@
   &__submit {
     padding: 0.3rem;
   }
+}
+
+.card__container {
+  min-width: 100%;
+  display: flex;
+  border: 2px solid orangered;
+  margin-top: 5rem;
+}
+
+.card__body {
+  background-color: white;
+  color: black;
+  padding: 2rem;
+  border: 2px solid lime;
 }
