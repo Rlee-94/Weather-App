@@ -33,7 +33,7 @@ async function renderWeatherData() {
     weather,
   } = weatherData;
 
-  pTemp.textContent = temp;
+  pTemp.textContent = `${Math.round(temp)}℉ `;
   pName.textContent = name;
   pCountry.textContent = country;
   pForecast.textContent = weather[0]["description"];
