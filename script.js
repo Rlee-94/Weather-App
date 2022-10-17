@@ -19,6 +19,15 @@ async function renderWeatherData() {
   const userInput = document.querySelector(".main__input").value;
   const weatherData = await getWeatherData(userInput);
 
+  //Destructured JSON
+  const {
+    main: { temp },
+    name,
+    sys: { country },
+    weather,
+  } = weatherData;
+  console.log(weatherData);
+
   //Create Card
   const card = document.createElement("div");
   card.className = "card";
@@ -28,19 +37,14 @@ async function renderWeatherData() {
   cardTemp.className = "card__temp";
   const cardForecast = document.createElement("div");
   cardForecast.className = "card__forecast";
+  const cardIcon = document.createElement("img");
+  cardIcon.className = "card__icon";
+  cardIcon.src = `http://openweathermap.org/img/w/${weather[0].icon}.png`;
 
   const pTemp = document.createElement("p");
   const pCity = document.createElement("p");
   const pCountry = document.createElement("p");
   const pForecast = document.createElement("p");
-
-  //Destructured JSON
-  const {
-    main: { temp },
-    name,
-    sys: { country },
-    weather,
-  } = weatherData;
 
   pTemp.textContent = `${Math.round(temp)}℉ `;
   pCity.textContent = name;
@@ -51,6 +55,7 @@ async function renderWeatherData() {
   cardCity.appendChild(pCountry);
   cardTemp.appendChild(pTemp);
   cardForecast.appendChild(pForecast);
+  cardForecast.appendChild(cardIcon);
 
   card.appendChild(cardCity);
   card.appendChild(cardTemp);
