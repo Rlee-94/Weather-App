@@ -32,14 +32,37 @@
 .card__container {
   min-width: 100%;
   display: flex;
+  flex-wrap: wrap;
   border: 2px solid orangered;
   margin-top: 5rem;
 }
 
-.card__body {
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
   background-color: white;
   color: black;
-  padding: 2rem;
-  border: 2px solid lime;
+  padding: 2.5rem;
   margin: 1.5rem;
+
+  &__city {
+    font-size: 3.3rem;
+    display: flex;
+  }
+
+  &__temp {
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
+
+  &__forecast {
+    font-size: 1.3rem;
+  }
+}
+
+.hidden {
+  display: none;
 }

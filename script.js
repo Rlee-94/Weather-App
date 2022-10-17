@@ -1,6 +1,10 @@
 const form = document.getElementById("main__form");
 const container = document.querySelector(".content__container");
 const cardContainer = document.querySelector(".card__container");
+const card = document.querySelector(".card");
+const cardCity = document.querySelector(".card__city");
+const cardTemp = document.querySelector(".card__temp");
+const cardForecast = document.querySelector(".card__forecast");
 
 //City Input
 async function getWeatherData(userInput) {
@@ -18,12 +22,10 @@ async function getWeatherData(userInput) {
 async function renderWeatherData() {
   const userInput = document.querySelector(".main__input").value;
   const weatherData = await getWeatherData(userInput);
-  const card = document.createElement("div");
   const pTemp = document.createElement("p");
   const pName = document.createElement("p");
   const pCountry = document.createElement("p");
   const pForecast = document.createElement("p");
-  card.className = "card__body";
 
   //Destructured JSON
   const {
@@ -35,16 +37,17 @@ async function renderWeatherData() {
 
   pTemp.textContent = `${Math.round(temp)}℉ `;
   pName.textContent = name;
-  pCountry.textContent = country;
+  pCountry.textContent = `, ${country}`;
   pForecast.textContent = weather[0]["description"];
 
-  card.appendChild(pName);
-  card.appendChild(pTemp);
-  card.appendChild(pForecast);
-  card.appendChild(pCountry);
+  cardCity.appendChild(pName);
+  cardCity.appendChild(pCountry);
+  cardTemp.appendChild(pTemp);
+  cardForecast.appendChild(pForecast);
 
   container.appendChild(cardContainer);
   cardContainer.appendChild(card);
+  card.classList.remove("hidden");
 }
 
 form.addEventListener("submit", async (e) => {
