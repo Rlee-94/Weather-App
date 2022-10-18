@@ -32,8 +32,8 @@ Project to create a simple Weather app using Open Weather API
 
 ### TO Do's
 
--I wasn't able to figure out how to make a separate function for creating a card and then passing my destructured variables to that function.
--Everything is in the renderWeather() function and I know this is not feasible and doesn't practice the principles of DRY. I hope with more practice, I can come back and reformat this code.
+- I wasn't able to figure out how to make a separate function for creating a card and then passing my destructured variables to that function.
+- Everything is in the renderWeather() function and I know this is not feasible and doesn't practice the principles of DRY. I hope with more practice, I can come back and reformat this code.
 
 ## Author
 
