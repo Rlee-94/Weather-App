@@ -9,35 +9,45 @@
 
 .header {
   &__title {
-    margin-top: 5rem;
+    color: $color-text-orange;
+    margin-top: 2rem;
     font-size: 5rem;
   }
 }
 
 .main {
   &__input {
-    margin-top: 2rem;
+    margin: 0 auto;
     padding: 0.3rem;
+    display: block;
 
     &-text {
+      color: $color-text-orange;
       font-size: 1.6rem;
     }
   }
 
   &__submit {
-    padding: 0.3rem;
+    padding: 0.8rem;
+    width: 65%;
+    margin-top: 1.5rem;
+    color: white;
+    background-color: black;
+    border-radius: 30px;
   }
 }
 
 .card__container {
-  min-width: 100%;
-  display: flex;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1rem;
   flex-wrap: wrap;
-  border: 2px solid orangered;
   margin-top: 5rem;
 }
 
 .card {
+  flex: 0 0 20%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -49,8 +59,9 @@
   margin: 1.5rem;
 
   &__city {
-    font-size: 3.3rem;
+    font-size: 3rem;
     display: flex;
+    justify-content: space-between;
   }
 
   &__temp {
@@ -59,10 +70,23 @@
   }
 
   &__forecast {
+    margin-top: 1rem;
     font-size: 1.3rem;
+  }
+
+  &__icon {
+    text-align: center;
   }
 }
 
 .hidden {
   display: none;
+}
+
+header {
+  border: 2px solid limegreen;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }

@@ -33,6 +33,8 @@ async function renderWeatherData() {
   card.className = "card";
   const cardCity = document.createElement("div");
   cardCity.className = "card__city";
+  const cardCountry = document.createElement("div");
+  cardCountry.className = "card__country";
   const cardTemp = document.createElement("div");
   cardTemp.className = "card__temp";
   const cardForecast = document.createElement("div");
@@ -48,11 +50,11 @@ async function renderWeatherData() {
 
   pTemp.textContent = `${Math.round(temp)}℉ `;
   pCity.textContent = name;
-  pCountry.textContent = `, ${country}`;
+  pCountry.textContent = `${country}`;
   pForecast.textContent = weather[0]["description"];
 
   cardCity.appendChild(pCity);
-  cardCity.appendChild(pCountry);
+  cardCountry.appendChild(pCountry);
   cardTemp.appendChild(pTemp);
   cardForecast.appendChild(pForecast);
   cardForecast.appendChild(cardIcon);

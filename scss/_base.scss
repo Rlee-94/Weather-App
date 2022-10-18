@@ -15,11 +15,13 @@ html {
 }
 
 body {
+  font-family: "Montserrat", sans-serif;
   background-image: linear-gradient(
     to right bottom,
-    rgba($color-primary-light, 0.8),
-    rgba($color-primary-dark, 0.8)
+    rgba($color-grey-light, 0.8),
+    rgba($color-grey-dark, 0.8)
   );
   background-size: cover;
   background-repeat: no-repeat;
+  width: 100vw;
 }
