@@ -34,6 +34,7 @@
     color: white;
     background-color: black;
     border-radius: 30px;
+    border: none;
   }
 }
 
@@ -84,7 +85,6 @@
 }
 
 header {
-  border: 2px solid limegreen;
   display: flex;
   flex-direction: column;
   align-items: center;

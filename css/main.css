@@ -16,7 +16,7 @@ html {
 
 body {
   font-family: "Montserrat", sans-serif;
-  background-image: linear-gradient(to right bottom, rgba(129, 129, 129, 0.8), rgba(49, 49, 49, 0.8));
+  background-image: linear-gradient(to right bottom, rgba(69, 69, 69, 0.8), rgba(24, 24, 24, 0.8));
   background-size: cover;
   background-repeat: no-repeat;
   width: 100vw;
@@ -53,6 +53,7 @@ body {
   color: white;
   background-color: black;
   border-radius: 30px;
+  border: none;
 }
 
 .card__container {
@@ -98,7 +99,6 @@ body {
 }
 
 header {
-  border: 2px solid limegreen;
   display: flex;
   flex-direction: column;
   align-items: center;

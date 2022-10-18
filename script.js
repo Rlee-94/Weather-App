@@ -26,7 +26,6 @@ async function renderWeatherData() {
     sys: { country },
     weather,
   } = weatherData;
-  console.log(weatherData);
 
   //Create Card
   const card = document.createElement("div");
@@ -66,6 +65,8 @@ async function renderWeatherData() {
   container.appendChild(cardContainer);
   cardContainer.appendChild(card);
 }
+
+function createCard() {}
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault;
