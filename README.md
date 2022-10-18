@@ -22,7 +22,7 @@ Project to create a simple Weather app using Open Weather API
 
 ## Summary
 
-- I wanted to start a project that required me tow ork with an API. I believed this would allow me to take a step further with learning JS. I had to research how to get an API key from open weather, fetch the key in JS, and extract the json data I wanted to create a weather card.
+- I wanted to start a project that required me to work with an API. I believed this would allow me to take a step further with learning JS. I had to research how to get an API key from open weather, fetch the key in JS, and extract the json data I wanted to create a weather card.
 
 ### What I learned
 
