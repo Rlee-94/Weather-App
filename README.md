@@ -2,6 +2,8 @@
 
 Project to create a simple Weather app using Open Weather API
 
+🔗 **Live preview:** [here](https://rlee-94.github.io/Weather-App/)
+
 ## Built with
 
 - HTML
